@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* ── RESET ── */
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #000000;
+  min-height: 100vh;
+}
+
+/* ── INPUT FIELDS ── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.field label {
+  font-size: 13px;
+  color: #333333;
+  font-weight: 500;
+}
+
+.field input,
+.field textarea {
+  background: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 10px 12px;
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #000000;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #999999;
+}
+
+/* ── BUTTONS ── */
+button {
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.auth-btn,
+.new-btn,
+.save-btn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.auth-btn:hover:not(:disabled),
+.new-btn:hover,
+.save-btn:hover:not(:disabled) {
+  background: #333333;
+}
+
+.auth-btn:disabled,
+.save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cancel-btn {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  color: #000000;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.cancel-btn:hover {
+  border-color: #000000;
+  background: #f5f5f5;
+}
+
+/* ── ERROR ── */
+.auth-error {
+  background: #ffebee;
+  border: 1px solid #cc0000;
+  color: #cc0000;
+  padding: 10px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
